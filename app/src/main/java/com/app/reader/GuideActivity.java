@@ -13,6 +13,8 @@ import com.app.reader.utils.SPUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
@@ -24,7 +26,8 @@ public class GuideActivity extends BaseActivity{
     private List<View> viewList;
     private ViewPager viewPager;
     private CircleIndicator circleIndicator;
-
+    @Bind(R.id.tv_jump)
+    TextView tv;
     @Override
     protected int getLayoutId() {
         return R.layout.avtivity_guide;
@@ -41,7 +44,6 @@ public class GuideActivity extends BaseActivity{
 
 
     }
-
 
     private void initData(){
         viewList = new ArrayList<View>();
