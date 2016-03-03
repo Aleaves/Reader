@@ -17,11 +17,24 @@
         android:layout_marginBottom="10dp"
         android:id="@+id/indicator"
         CircleIndicator:ci_background="@android:color/white"
-        CircleIndicator:ci_selected_background="0xffe6454a"
+        CircleIndicator:ci_selected_background="@android:color/holo_red_light"
         CircleIndicator:ci_mode="outside"
         CircleIndicator:ci_gravity="center"
-        CircleIndicator:ci_radius="10dp"
+        CircleIndicator:ci_radius="5dp"
         CircleIndicator:ci_margin="5dp"
         />
-
+    <TextView
+        android:id="@+id/tv_jump"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="跳过"
+        android:background="@drawable/app_jump_bg"
+        android:gravity="center"
+        android:alpha="0.5"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:textSize="@dimen/app_commom_size"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/app_bg"
+        />
 </RelativeLayout>
