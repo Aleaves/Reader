@@ -1,6 +1,7 @@
 package com.app.reader;
 import android.animation.ObjectAnimator;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +20,7 @@ public class MainActivity extends BaseActivity {
     MyLinearLayout mLinearLayout;
     @Override
     protected void init() {
-
+        Log.i("======","11");
         //初始化注解
         ButterKnife.bind(this);
         //左边的
