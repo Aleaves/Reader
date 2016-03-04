@@ -7,7 +7,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        Log.i("==========","123");
+        
     }
 
     @Override
