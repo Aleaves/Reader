@@ -20,9 +20,9 @@ public class MainActivity extends BaseActivity {
     DragLayout mDragLayout;
     @Bind(R.id.mll)
     MyLinearLayout mLinearLayout;
-
     @Override
     protected void init() {
+
         //初始化注解
         ButterKnife.bind(this);
         //左边的
