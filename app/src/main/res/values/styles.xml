@@ -3,6 +3,15 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--//修改右边的图案-->
+        <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+    </style>
+
+    <style name="OverflowButtonStyle" parent="@android:style/Widget.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_launcher</item>
     </style>
 
 </resources>
