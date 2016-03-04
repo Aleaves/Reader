@@ -7,7 +7,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        Log.e("test", "hzp.s..........");
+
     }
 
     @Override
