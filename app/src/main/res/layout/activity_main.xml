@@ -1,8 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    >
+    <RadioGroup
+        android:id="@+id/rg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        >
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:button="@null"
+            android:background="#00000000"
+            android:paddingBottom="2dp"
+            android:drawableTop="@drawable/bookstand_selector"
+            android:text="书架"
+            android:textColor="@drawable/main_bottom_text_selector"
+            android:textSize="@dimen/app_commom_size"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#00000000"
+            android:button="@null"
+            android:paddingBottom="2dp"
+            android:drawableTop="@drawable/city_selector"
+            android:text="精选"
+            android:textColor="@drawable/main_bottom_text_selector"
+            android:textSize="@dimen/app_commom_size"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="#00000000"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:drawableTop="@drawable/stack_selector"
+            android:text="书库"
+            android:textColor="@drawable/main_bottom_text_selector"
+            android:textSize="@dimen/app_commom_size"
+            />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="#00000000"
+            android:paddingBottom="2dp"
+            android:drawableTop="@drawable/find_selector"
+            android:gravity="center"
+            android:text="发现"
+            android:textColor="@drawable/main_bottom_text_selector"
+            android:textSize="@dimen/app_commom_size"
+            />
+    </RadioGroup>
 
+    <View
+        android:id="@+id/vLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/app_light_grey"
+        android:layout_above="@id/rg_bottom"
+        />
 
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/vLine"
+        ></RelativeLayout>
+
+</RelativeLayout>
