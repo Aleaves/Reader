@@ -1,12 +1,8 @@
 package com.app.reader.View;
-
-
-
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.LinearLayout;
-
 public class MyLinearLayout extends LinearLayout {
 	
 	private DragLayout mDragLayout;
@@ -39,7 +35,6 @@ public class MyLinearLayout extends LinearLayout {
 			if (event.getAction() == MotionEvent.ACTION_UP) {
 				mDragLayout.close();
 			}
-
 			return true;
 		}
 	}
