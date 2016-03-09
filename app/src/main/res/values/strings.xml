@@ -9,4 +9,12 @@
     <string name="main_add">添加</string>
     <string name="drawer_open">打开</string>
     <string name="drawer_close">关闭</string>
+
+    <string name="novel_item_cover">小说封面</string>
+    <string name="novel_item_intro_with_colon">内容简介：</string>
+    <string name="list_loading">正在载入列表……</string>
+    <string name="novel_item_status_with_colon">文章状态：</string>
+    <string name="loading">loading…</string>
+    <string name="novel_item_author_with_colon">小说作者：</string>
+    <string name="novel_item_update_with_colon">更新时间：</string>
 </resources>

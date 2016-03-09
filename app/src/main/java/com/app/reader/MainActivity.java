@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -79,6 +80,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         if(null==data)
             return;
         String filename = data.getStringExtra("filename");
+        Log.i("=========",filename);
         Toast.makeText(this, filename, Toast.LENGTH_SHORT).show();
     }
 

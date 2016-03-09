@@ -9,4 +9,6 @@ public class ReaderConstants {
     public static final int SPLASH_DELAY_MILLIS=3000;
 
     public static final String IS_FIRST_IN="IS_FIRST_IN";
+
+    public static final String NOVEL_LIST="Book";
 }

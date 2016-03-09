@@ -343,12 +343,14 @@
                 android:background="@color/app_light_grey"
                 android:layout_above="@id/rg_bottom"
                 />
+
             <RelativeLayout
                 android:id="@+id/rl_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_above="@id/vLine"
                 ></RelativeLayout>
+
         </RelativeLayout>
     </com.app.reader.View.MyLinearLayout>
 
