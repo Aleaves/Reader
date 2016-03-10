@@ -11,4 +11,7 @@ public class ReaderConstants {
     public static final String IS_FIRST_IN="IS_FIRST_IN";
 
     public static final String NOVEL_LIST="Book";
+
+    public static final String FILE_NAME="FILE_NAME";
+    public static final String FILE_PATH="FILE_PATH";
 }

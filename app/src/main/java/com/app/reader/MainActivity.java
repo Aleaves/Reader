@@ -12,12 +12,21 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
 import com.app.reader.View.DragLayout;
 import com.app.reader.View.MyLinearLayout;
+import com.app.reader.entity.Novel;
 import com.app.reader.fragment.BookShelfFragment;
 import com.app.reader.fragment.FindFragment;
 import com.app.reader.fragment.SelectFragment;
 import com.app.reader.fragment.StackFragment;
+import com.app.reader.utils.ReaderConstants;
+import com.app.reader.utils.T;
+
+import org.litepal.crud.DataSupport;
+
+import java.util.List;
+
 import butterknife.Bind;
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener{
     @Bind(R.id.id_toolbar)
@@ -60,8 +69,8 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
                         msg += "attention";
                         break;*/
                     case R.id.main_menu_add:
-                        Intent intent=new Intent(MainActivity.this,FileChooser.class);
-                        startActivityForResult(intent,1);
+                        Intent intent = new Intent(MainActivity.this, FileChooser.class);
+                        startActivityForResult(intent, 1);
                         break;
                     case R.id.main_menu_search:
                         break;
@@ -79,9 +88,22 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(null==data)
             return;
-        String filename = data.getStringExtra("filename");
-        Log.i("=========",filename);
-        Toast.makeText(this, filename, Toast.LENGTH_SHORT).show();
+        String filename = data.getStringExtra(ReaderConstants.FILE_NAME);
+        String filePath=data.getStringExtra(ReaderConstants.FILE_PATH);
+
+        List<Novel> lists=DataSupport.where("novelname = ?",filename.substring(0, filename.lastIndexOf("."))).find(Novel.class);
+        if(lists.size()>0){
+            T.showShort(this,"该书本已存在书架中..");
+        }else{
+            Novel novel=new Novel();
+            novel.setNovelName(filename.substring(0, filename.lastIndexOf(".")));
+            novel.setNovelPath(filePath);
+            novel.setNovelImage("");
+            boolean flag=novel.save();
+            if(flag){
+                mBookShelfFragment.updateNovel();
+            }
+        }
     }
 
     @Override

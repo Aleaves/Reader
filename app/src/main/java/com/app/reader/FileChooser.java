@@ -8,6 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.app.reader.adapter.FileAdapter;
+import com.app.reader.utils.ReaderConstants;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -129,7 +131,8 @@ public class FileChooser extends BaseActivity {
                 if (childFile.endsWith(".txt")) {
 
                     Intent intentForResult = new Intent();
-                    intentForResult.putExtra("filename", childFile);
+                    intentForResult.putExtra(ReaderConstants.FILE_PATH,childFile);
+                    intentForResult.putExtra(ReaderConstants.FILE_NAME, fileList.get(position).get("filename").toString());
                     FileChooser.this.setResult(1, intentForResult);
                     FileChooser.this.finish();
                 } else {

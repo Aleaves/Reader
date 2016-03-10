@@ -44,6 +44,12 @@
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             />
+
+        <activity android:name=".ReadActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            />
+
     </application>
 
 </manifest>
