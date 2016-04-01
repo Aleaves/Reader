@@ -6,12 +6,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.app.reader.R;
 
 /**
- * Created by Administrator on 2016/3/4.
+ * Created by llb on 2016/3/4.
  */
+
 public class FindFragment extends Fragment{
     @Nullable
     @Override

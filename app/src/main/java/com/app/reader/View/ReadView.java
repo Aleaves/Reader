@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import com.app.reader.utils.T;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +18,7 @@ import java.util.List;
 
 public class ReadView extends View {
 
-    private int fontSize=30;//字体大小
+    private int fontSize=20;//字体大小
     private int bound=30;//行间距
     private String content;
     private Paint mPaint;
@@ -39,6 +38,8 @@ public class ReadView extends View {
     private List<Integer> preList=new ArrayList<Integer>();
     private int preCount;
     private int thisCount;
+
+    private boolean isClick=false;
 
     public ReadView(Context context) {
         super(context);
@@ -65,6 +66,9 @@ public class ReadView extends View {
 
         lineCount=height/(fontSize+bound);
 
+        if(readCount>0&&isClick==false){
+            readCount=0;
+        }
         thisCount=readCount;
         for(int i=0;i<lineCount;i++){
             while(true){
@@ -82,8 +86,9 @@ public class ReadView extends View {
             canvas.drawText(content.substring(readCount,readCount+lineNum-1),getPaddingLeft(),getPaddingTop()+fontSize+(fontSize+bound)*i,mPaint);
 
             readCount+=lineNum;
-            if(isLine) {
 
+            if(isLine) {
+                //属于换行
             }else{
                 readCount--;
             }
@@ -92,6 +97,7 @@ public class ReadView extends View {
 
         thisCount=readCount-thisCount;
 
+        Log.i("==========",thisCount+"");
     }
 
 
@@ -108,7 +114,8 @@ public class ReadView extends View {
                 break;
 
         }
-        if(x2!=0) {
+        if(x2!=0){
+            isClick=true;
             if (x2 - x1 < 0) {
                 preList.add(thisCount);
                 invalidate();

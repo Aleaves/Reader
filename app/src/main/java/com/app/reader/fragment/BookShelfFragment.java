@@ -46,6 +46,7 @@ public class BookShelfFragment extends Fragment implements MyItemClickListener,M
     /**
      * 更新书架小说
      */
+
     public void updateNovel(){
         mAdapter.setData(DataSupport.order("id desc").find(Novel.class));
     }
@@ -67,6 +68,7 @@ public class BookShelfFragment extends Fragment implements MyItemClickListener,M
      * @param view
      * @param postion
      */
+
     @Override
     public void onItemLongClick(View view, int postion) {
 

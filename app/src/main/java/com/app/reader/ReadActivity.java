@@ -12,6 +12,8 @@ import butterknife.Bind;
  * Created by llb on 2016/3/10.
  * 阅读界面
  */
+
+
 public class ReadActivity extends BaseActivity{
     private String filePath;
     @Bind(R.id.readView)
