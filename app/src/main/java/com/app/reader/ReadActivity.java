@@ -20,6 +20,7 @@ public class ReadActivity extends BaseActivity{
     ReadView mReadView;
     @Override
     protected void init() {
+        //
         filePath=getIntent().getStringExtra(ReaderConstants.FILE_PATH);
         //String str= ReadConfig.loadFullFileFromSaveFolder(filePath);
         String str= LightCache.readTxtFile(filePath);
